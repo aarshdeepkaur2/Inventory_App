@@ -60,3 +60,5 @@ def lambda_handler(event, context):
             'statusCode': 500,
             'body': json.dumps({"error": f"Error adding item: {str(e)}"})
         }
+
+
