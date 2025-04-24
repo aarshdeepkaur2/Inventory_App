@@ -19,5 +19,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: us-east-1
-      - name: Upload index.html to S3
-      run: aws s3 cp index.html s3://inventoryapp.rrc.ca/index.html
+      - name: Copy website to S3
+        run: aws s3 sync . s3://inventoryapp.rrc.ca --exclude "*" --include "index.html"
