@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mars Rover Photo Explorer</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Mars Rover Photo Explorer</h1>
-    </header>
-    <main>
-        <section id="controls">
-            <label for="dateInput">Select Date:</label>
-            <input type="date" id="dateInput">
-            <button id="loadPhotosButton">Load Photos</button>
-        </section>
-        <section id="gallery">
-            <h2>Photo Gallery</h2>
-            <div id="photos"></div>
-        </section>
-    </main>
-    <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Adventure Game</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main id="game-container" role="main">
+            <h1>Your Adventure Game</h1>
+            <section id="question-container" aria-labelledby="question">
+                <p id="question" tabindex="0">Your adventure begins now...</p>
+            </section>
+            <ul id="answers" role="group" aria-label="Answer choices">
+                
+            </ul>
+            <button id="next-btn" onclick="handleNext()" aria-label="Proceed to the next question">Next</button>
+            <button id="reset-btn" onclick="resetGame()" style="display: none;" aria-label="Reset the game">Reset</button>
+        </main>
+        <script src="script.js"></script>
+    </body>
 </html>
