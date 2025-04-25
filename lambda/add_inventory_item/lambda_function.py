@@ -7,7 +7,7 @@ def lambda_handler(event, context):
     # Logging raw input (for debugging purposes only, remove in production)
     print("Received event:", json.dumps(event))
 
-    # Parse JSON safely
+    # Parse JSON safely 
     try:
         body = event.get('body', '')
         if not body:
@@ -20,7 +20,7 @@ def lambda_handler(event, context):
             'body': json.dumps({"error": f"Bad request. Invalid JSON. {str(e)}"})
         }
 
-    # Setup DynamoDB
+    # Setup DynamoDB and added my table
     dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table('InventoryApp')
 
